@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستشفى الشفاء</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>مستشفى الشفاء</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="departments.html">الأقسام الطبية</a></li>
+                <li><a href="team.html">الفريق الطبي</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="#" id="logoutLink">تسجيل الخروج</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>مرحباً بكم في مستشفى الشفاء</h2>
+            <p>نقدم أفضل الخدمات الطبية بأحدث التقنيات وأمهر الأطباء.</p>
+        </section>
+        <section class="about">
+            <h3>عن المستشفى</h3>
+            <p>مستشفى الشفاء هو مركز طبي متكامل يقدم خدمات طبية عالية الجودة في جميع التخصصات.</p>
+        </section>
+    </main>
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 مستشفى الشفاء</p>
+    </footer>
+    <script src="assets/script.js"></script>
+    <script>
+        // تحقق من تسجيل الدخول
+        if (!localStorage.getItem('loggedIn')) {
+            window.location.href = 'login.html';
+        }
+        // تسجيل الخروج
+        document.getElementById('logoutLink').onclick = function() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = 'login.html';
+        };
+    </script>
+</body>
+</html>
